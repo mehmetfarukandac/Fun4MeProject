@@ -37,11 +37,11 @@ const PublicHolidays = () => {
     return (
         <React.Fragment>
             <Card style={styles.cardHoliday}>
-                <Text style={{color: "#fff", textAlign: "center" }} category='h6'>Milli Bayramlar</Text>
+                <Text style={{ color: "#fff", textAlign: "center" }} category='h6'>Milli Bayramlar</Text>
             </Card>
             {
-                data?.map(dt => (
-                    <Card style={styles.card} footer={<Footer data={dt} />}>
+                data?.map((dt, index) => (
+                    <Card key={index} style={styles.card} footer={<Footer data={dt} />}>
                         <Text style={{ color: "#fff" }} category='h6'>{dt.localName}</Text>
                         <Text style={{ color: "#fff" }} category='s1'>{dt.name}</Text>
                     </Card>

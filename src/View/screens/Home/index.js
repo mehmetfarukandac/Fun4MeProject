@@ -59,16 +59,17 @@ const Home = () => {
         <>
             <IpAdress />
             <ScrollView>
-            {
-                listElement?.map(element => (
-                    <ListItem
-                        title={element?.name}
-                        description={element?.description}
-                        accessoryLeft={<ItemImage element={element} />}
-                        accessoryRight={<InstallButton url={element?.url} navigation={navigation} />}
-                    />
-                ))
-            }
+                {
+                    listElement?.map((element, index) => (
+                        <ListItem
+                            key={index}
+                            title={element?.name}
+                            description={element?.description}
+                            accessoryLeft={<ItemImage element={element} />}
+                            accessoryRight={<InstallButton url={element?.url} navigation={navigation} />}
+                        />
+                    ))
+                }
                 <PublicHolidays />
             </ScrollView>
             {/* <Layout style={styles.container} level='1'>

@@ -9,13 +9,15 @@ const NameInput = ({ setName, nameFetchHandler, name }) => {
             onSubmitEditing={nameFetchHandler}
             value={name}
             style={{
-                borderBottomColor: 'red',
-                backgroundColor: '#fff',
+                borderBottomColor: 'orange',
+                backgroundColor: '#F0F0F0',
+                borderRadius: 15,
                 paddingVertical: 20,
                 marginHorizontal: 10,
                 fontSize: 45,
                 textAlign: 'center',
                 borderBottomWidth: 8,
+                borderRightWidth: 8,
                 borderRightWidth: 8,
                 marginVertical: 20,
             }}

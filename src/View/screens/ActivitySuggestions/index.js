@@ -1,6 +1,9 @@
+import { Button, Card, Text } from '@ui-kitten/components';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+
 const ActivitySuggestions = () => {
 
     const [data, setData] = useState({});
@@ -21,12 +24,59 @@ const ActivitySuggestions = () => {
     }
 
     return (
-        <View>
-            <Text>{data.activity}</Text>
-            <Text>{data.type}</Text>
-            <Text>{data.price}</Text>
-            <Button onPress={findNewActivity} title="Change Activity" />
-        </View>
+        <Card style={styles.card} header={<Header type={data.type} />} footer={<Footer findNewActivity={findNewActivity} />}>
+            <Text style={styles.activity}>
+                {data.activity}
+            </Text>
+            <Text style={styles.price}>Price: {data.price}</Text>
+        </Card>
     );
 };
 export default ActivitySuggestions;
+
+const Footer = (props) => (
+    <View {...props} style={[props.style, styles.footerContainer]}>
+        <Button
+            style={styles.footerControl}
+            size='small'
+            onPress={props.findNewActivity}
+            status='basic'>
+            Change Activity
+        </Button>
+    </View>
+);
+
+const Header = (props) => (
+    <View {...props}>
+        <Text style={styles.type} category='h6'>{props.type}</Text>
+    </View>
+);
+
+const styles = StyleSheet.create({
+    activity: {
+        fontSize: 20,
+        textTransform: 'capitalize',
+        textAlign: 'center',
+        marginBottom: 20
+    },
+    type: {
+        fontSize: 40,
+        textTransform: 'capitalize',
+        textAlign: 'center'
+    },
+    topContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    card: {
+        margin: 5, 
+        borderRadius: 10
+    },
+    footerContainer: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+    },
+    footerControl: {
+        marginHorizontal: 2,
+    },
+});
