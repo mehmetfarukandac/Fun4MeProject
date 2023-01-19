@@ -16,7 +16,7 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <ApplicationProvider {...eva} theme={eva.dark}>
+    <ApplicationProvider {...eva} theme={eva.light}>
       <StatusBar style='dark' />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
@@ -26,7 +26,7 @@ export default function App() {
             options={{
               title: "Home",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -42,7 +42,7 @@ export default function App() {
             options={{
               title: "Age Based On Name",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -58,7 +58,7 @@ export default function App() {
             options={{
               title: "Daily Astronomy Picture",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -74,7 +74,7 @@ export default function App() {
             options={{
               title: "Activity Suggestions",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -90,7 +90,7 @@ export default function App() {
             options={{
               title: "Random dog images",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -106,7 +106,7 @@ export default function App() {
             options={{
               title: "Popular memes",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -122,7 +122,7 @@ export default function App() {
             options={{
               title: "Jokes",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {
@@ -138,7 +138,7 @@ export default function App() {
             options={{
               title: "Rick and Morty",
               headerStyle: {
-                backgroundColor: '#F0F0F0',
+                backgroundColor: '#fff',
               },
               headerTintColor: '#000',
               headerTitleStyle: {

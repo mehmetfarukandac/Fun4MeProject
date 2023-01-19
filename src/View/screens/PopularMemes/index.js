@@ -21,8 +21,8 @@ const PopularMemes = () => {
     return (
         <ScrollView>
             {
-                data?.map(dt => (
-                    <View style={{ borderBottomWidth: 4 }}>
+                data?.map((dt, index) => (
+                    <View key={index} style={{ borderBottomWidth: 4 }}>
                         <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 25, marginTop: 10 }}>{dt?.name}</Text>
                         <Image
                             style={styles.tinyLogo}

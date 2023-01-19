@@ -19,7 +19,7 @@ const Jokes = () => {
             method: 'GET',
             url: `https://v2.jokeapi.dev/joke/Any?safe-mode`,
         }).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             setData(response.data);
         }).catch((error) => {
             alert(error.message);
@@ -100,7 +100,9 @@ const styles = StyleSheet.create({
     card: {
         margin: 5,
         borderRadius: 10,
-        color: '#000'
+        color: '#000',
+        borderWidth: 5,
+        borderColor: "#2196F3",
     },
     footerContainer: {
         flexDirection: 'column',

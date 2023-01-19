@@ -37,13 +37,13 @@ const PublicHolidays = () => {
     return (
         <React.Fragment>
             <Card style={styles.cardHoliday}>
-                <Text style={{ color: "#fff", textAlign: "center" }} category='h6'>Milli Bayramlar</Text>
+                <Text style={{ color: "#fff", textAlign: "center", fontWeight: 'bold', fontSize: 21, }} category='h6'>Milli Bayramlar</Text>
             </Card>
             {
                 data?.map((dt, index) => (
                     <Card key={index} style={styles.card} footer={<Footer data={dt} />}>
-                        <Text style={{ color: "#fff" }} category='h6'>{dt.localName}</Text>
-                        <Text style={{ color: "#fff" }} category='s1'>{dt.name}</Text>
+                        <Text style={{ color: "#000", fontWeight: 'bold' }} category='h6'>{dt.localName}</Text>
+                        <Text style={{ color: "#000", fontWeight: 'bold' }} category='s1'>{dt.name}</Text>
                     </Card>
                 ))
             }
@@ -62,21 +62,28 @@ const styles = StyleSheet.create({
     },
     card: {
         flex: 1,
-        color: "#fff",
-        marginTop: 2
+        backgroundColor: "#fff",
+        borderBottomWidth: 8,
+        borderBottomColor: '#2196F3',
+        borderColor:'#C8E6C9',
+        borderWidth:3
     },
     cardHoliday: {
         flex: 1,
         color: "#fff",
-        marginTop: 2
+        margin: 2,
+        backgroundColor: "#2196F3"
     },
     footerContainer: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        color: "#fff"
+        color: "#fff",
+        borderTopWidth:2,
+        borderTopColor:'#C8E6C9'
     },
     footerControl: {
         marginHorizontal: 2,
-        color: "#fff"
+        color: "#2196F3",
+        fontWeight:'bold'
     },
 });

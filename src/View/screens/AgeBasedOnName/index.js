@@ -104,6 +104,8 @@ const styles = StyleSheet.create({
     card: {
         borderRadius: 50,
         margin: 15,
-        backgroundColor:"#fffff9"
+        backgroundColor:"#EFEBE9",
+        borderWidth:5,
+        borderColor:"#2196F3"
     }
 });

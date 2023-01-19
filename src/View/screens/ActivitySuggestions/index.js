@@ -69,8 +69,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     card: {
-        margin: 5, 
-        borderRadius: 10
+        margin: 5,
+        borderRadius: 10,
+        borderWidth: 5,
+        borderColor: "#2196F3",
     },
     footerContainer: {
         flexDirection: 'row',

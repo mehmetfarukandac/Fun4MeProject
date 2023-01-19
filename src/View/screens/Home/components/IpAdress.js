@@ -13,7 +13,7 @@ const IpAdress = () => {
             method: 'GET',
             url: `https://api.ipify.org/?format=json`,
         }).then((response) => {
-            console.log(JSON.stringify(response.data));
+            // console.log(JSON.stringify(response.data));
             setData(response.data);
         }).catch((error) => {
             alert(error.message);
@@ -21,8 +21,8 @@ const IpAdress = () => {
     }, []);
 
     return (
-        <Card style={styles.card} status='warning'>
-            <Text style={{ textAlign: 'center' }}>{data?.ip}</Text>
+        <Card style={styles.card} status='info'>
+            <Text style={{ textAlign: 'center', color: '#2196F3', fontWeight: 'bold', fontSize: 15 }}>{data?.ip}</Text>
         </Card>
     );
 };
@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
     },
     card: {
         marginBottom: 2,
-
+        backgroundColor: '#C8E6C9'
     },
 });

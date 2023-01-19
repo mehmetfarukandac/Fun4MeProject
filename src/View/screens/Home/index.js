@@ -62,6 +62,7 @@ const Home = () => {
                 {
                     listElement?.map((element, index) => (
                         <ListItem
+                            style={styles.listItems}
                             key={index}
                             title={element?.name}
                             description={element?.description}
@@ -72,41 +73,6 @@ const Home = () => {
                 }
                 <PublicHolidays />
             </ScrollView>
-            {/* <Layout style={styles.container} level='1'>
-
-                <Card style={styles.card} status='primary'>
-                    <Text>Primary</Text>
-                </Card>
-
-                <Card style={styles.card} status='success'>
-                    <Text>Success</Text>
-                </Card>
-
-                <Card style={styles.card} status='info'>
-                    <Text>Info</Text>
-                </Card>
-
-                <Card style={styles.card} status='warning'>
-                    <Text>Warning</Text>
-                </Card>
-
-                <Card style={styles.card} status='danger'>
-                    <Text>Danger</Text>
-                </Card>
-
-                <Card style={styles.card} status='basic'>
-                    <Text>Basic</Text>
-                </Card>
-
-            </Layout> 
-            <Card>
-                <Text>
-                    The Maldives, officially the Republic of Maldives, is a small country in South Asia,
-                    located in the Arabian Sea of the Indian Ocean.
-                    It lies southwest of Sri Lanka and India, about 1,000 kilometres (620 mi) from the Asian continent
-                </Text>
-            </Card> */}
-
         </>
     );
 };
@@ -117,6 +83,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexWrap: 'wrap',
         borderStyle: "none"
+    },
+    listItems: {
+        margin: 2,
+        backgroundColor: '#fff',
+        color: 'red'
     },
     card: {
         margin: 2,
